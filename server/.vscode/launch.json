@@ -16,8 +16,7 @@
 				"run-script",
 				"debug"
 			],
-			"port": 5858,
-			"cwd": "${workspaceRoot}"
+			"port": 5858
 		}
 	]
 }

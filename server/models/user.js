@@ -3,6 +3,7 @@ let Schema = mongoose.Schema
 let ObjectId = Schema.Types.ObjectId
 let bcrypt = require('bcryptjs')
 const SALT_FACTOR = 10
+import { models } from '../config/constants'
 
 let schema = new Schema({
   name: { type: String, required: true },
@@ -40,4 +41,4 @@ schema.methods.validatePassword = function (password) {
   })
 };
 
-module.exports = mongoose.model('User', schema)
+module.exports = mongoose.model(models.user.name, schema)
