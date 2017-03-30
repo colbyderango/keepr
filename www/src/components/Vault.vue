@@ -28,8 +28,18 @@
         </div>
       </div>
     </div>
-    <div v-if="activeVault.keeps" class="row">
-      <div v-for="keep in activeVault.keeps" class="col s6 m4">
+       <!--<div v-show="showKeeps" class="masonry">
+            <h4 class="center">My Keeps
+            </h4>
+            <router-link to="/keeps" class="waves-effect waves-teal btn">Add Keep</router-link>
+            <div class="row center">
+                <div v-for="keep in myKeeps" class="item">
+                    <keep :keep="keep"></keep>
+                </div>
+            </div>
+        </div>-->
+    <div v-if="activeVault.keeps" class="masonry">
+      <div v-for="keep in activeVault.keeps" class="item">
         <div class="right-align">
           <a @click="removeFromVault(keep)"><i class="fa fa-times"></i></a>
         </div>

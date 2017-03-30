@@ -76,9 +76,7 @@
         margin-top: 7px;
     }
     
-    ul.side-nav {
-        background-color: salmon;
-    }
+
     
     .name,
     .email {

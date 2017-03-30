@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-   
+        <form @submit.prevent="searchBar">
+            <input type="search" placeholder="SEARCH">
+        </form>
         <div class="pages">
             <ul class="pagination">
                 <li :class="{ active: showVaults, 'waves-effect': showKeeps }"><a @click="activateVaults">Vaults</a></li>
@@ -11,7 +13,7 @@
         <div v-show="showVaults">
             <h4 class="center">My Vaults
             </h4>
-            <router-link to="/vaults" class="waves-effect waves-teal btn">Add Vault</router-link>
+            <router-link to="/vaults" class="waves-effect waves-teal btn flat">Add Vault</router-link>
             <div v-for="vault in myVaults" class="card">
                 <div class="card-image" v-if="vault.imageUrl">
                     <img :src="vault.imageUrl">
@@ -64,6 +66,9 @@
             },
             myKeeps() {
                 return this.$root.$data.store.state.myKeeps;
+            },
+            searchBar(){
+                return
             }
         },
         mounted() {
@@ -92,6 +97,13 @@
 </script>
 
 <style>
+    input{
+        color: white;
+
+    }
+    h4{
+        color: white;
+    }
     .masonry {
         /* Masonry container */
         align-items: center;
@@ -128,7 +140,9 @@
     .collection-item a:hover {
         color: white;
     }
-    
+    .pagination li a {
+        color: white;
+    }
     .pagination li.active {
         background: teal;
     }

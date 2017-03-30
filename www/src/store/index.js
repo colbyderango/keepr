@@ -103,6 +103,9 @@ export default {
         })
         .catch(handleError);
     },
+    searchBar(){
+      
+    },
     logout() {
       api.delete('http://localhost:3000/logout')
         .then(res => {
