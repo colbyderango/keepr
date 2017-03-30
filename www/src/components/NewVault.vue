@@ -32,6 +32,8 @@
     methods: {
       createVault() {
         this.$root.$data.store.actions.createVault(this.name, this.description, this.image);
+                  Materialize.toast("You've created a Vault!'", 1000);
+
       }
     }
   }

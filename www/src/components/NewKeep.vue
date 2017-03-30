@@ -65,7 +65,14 @@
             tags: this.tags,
             userId: this.$root.$data.store.state.user._id
           }
+
           this.$root.$data.store.actions.createKeep(select, keep);
+          this.title = '',
+            this.image = '',
+            this.article = '',
+            this.tags = '',
+            console.log('created keep')
+          Materialize.toast("You've created a keep!'", 1000);
         }
       }
     }

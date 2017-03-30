@@ -65,7 +65,8 @@
         editTitle: '',
         editImg: '',
         editArticle: '',
-        editTags: ''
+        editTags: '',
+        toggleEdit: ''
       }
     },
     mounted() {

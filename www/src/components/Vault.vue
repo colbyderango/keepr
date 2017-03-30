@@ -94,3 +94,8 @@
   }
 
 </script>
+<style scoped>
+input{
+  color: black;
+}
+</style>
