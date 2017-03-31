@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div class="navbar-fixed">
+        <div class=" navbar navbar-fixed">
             <nav class="N/A transparent">
                 <div class="nav-wrapper ">
-                    <a href="#" class="brand-logo right"><img class="logo" src="../assets/logo.jpg"></a>
+                    <a href="#" class="brand-logo center"><img class="logo" src="../assets/logo.jpg"></a>
                     <ul v-if="!this.$root.$data.store.state.user._id" class="right">
                         <li>
                             <router-link to="login">Login</router-link>
@@ -47,6 +47,17 @@
             $(".button-collapse").sideNav();
         }
     }
+    $(document).ready(function() {
+        // Transition effect for navbar 
+        $(window).scroll(function() {
+          // checks if window is scrolled more than 500px, adds/removes solid class
+          if($(this).scrollTop() > 500) { 
+              $('.navbar').addClass('solid');
+          } else {
+              $('.navbar').removeClass('solid');
+          }
+        });
+});
 
 </script>
 

@@ -189,6 +189,20 @@ export default {
         })
         .catch(handleError);
     },
+        searchByTag(tags){
+      api.post('taggedkeeps', {
+        tags: tags
+      })
+        .then(res => {
+          state.searchedTerm = tags;
+          state.searchResults = res.data.data;
+        })
+        .catch(handleError);
+    },
+    clearSearch(){
+      state.searchedTerm = '';
+      state.searchResults = [];
+    },
     removeFromVault(vaultId, keepId) {
       api.put('vault/' + vaultId + '/removekeep', keepId)
         .then(res => {

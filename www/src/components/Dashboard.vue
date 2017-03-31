@@ -1,8 +1,5 @@
 <template>
     <div class="container">
-        <form @submit.prevent="searchBar">
-            <input type="search" placeholder="SEARCH">
-        </form>
         <div class="pages">
             <ul class="pagination">
                 <li :class="{ active: showVaults, 'waves-effect': showKeeps }"><a @click="activateVaults">Vaults</a></li>
@@ -66,9 +63,6 @@
             },
             myKeeps() {
                 return this.$root.$data.store.state.myKeeps;
-            },
-            searchBar(){
-                return
             }
         },
         mounted() {
@@ -96,13 +90,16 @@
 
 </script>
 
-<style>
-    input{
+<style scoped>
+    .input{
         color: white;
 
     }
+    h5{
+        color: black;
+    }
     h4{
-        color: white;
+        color: White;
     }
     .masonry {
         /* Masonry container */
@@ -125,7 +122,7 @@
     }
     
     .secondary-content a {
-        color: white;
+        color: black;
     }
     
     .collection-item {

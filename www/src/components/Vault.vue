@@ -76,6 +76,7 @@
     mounted() {
       this.$root.$data.store.actions.setActiveVault(this.$route.params.id);
     },
+    
     methods: {
       removeFromVault(keep) {
         this.$root.$data.store.actions.removeFromVault(this.$route.params.id, keep._id);
@@ -90,12 +91,19 @@
         this.$root.$data.store.actions.editVault(this.$route.params.id, this.editName, this.editDesc, this.editImg);
         this.showEdit = false;
       }
+      
     }
   }
 
 </script>
 <style scoped>
 input{
+  color: black;
+}
+h4{
+  color: black;
+}
+p{
   color: black;
 }
 </style>

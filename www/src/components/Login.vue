@@ -63,11 +63,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    #password{
-        color: black;
-    }
-     #username{
-        color: black;
-    }
+  input{
+      color: black;
+  }
 
 </style>

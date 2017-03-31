@@ -72,7 +72,7 @@
             this.article = '',
             this.tags = '',
             console.log('created keep')
-          Materialize.toast("You've created a keep!'", 1000);
+          Materialize.toast("You've created a keep!", 1000);
         }
       }
     }
@@ -80,6 +80,12 @@
 
 </script>
 
-<style>
+<style scoped>
+  input{
+    color: white;
+  }
+  h4{
+    color: white;
+  }
 
 </style>

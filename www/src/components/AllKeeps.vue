@@ -37,7 +37,7 @@
         }
     }
 
-</script>
+</script scoped>
 
 <style>
     body {
@@ -59,10 +59,12 @@
     }
     
     .item {
-        /* Masonry bricks or child elements */
-        /*padding: px;*/
+
         display: inline-block;
         margin: 1em 1em 1em;
         width: 100%;
+    }
+    h4{
+        color: white;
     }
 </style>

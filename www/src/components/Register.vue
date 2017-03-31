@@ -84,4 +84,7 @@
     .register {
         padding-top: 5rem;
     }
+    input{
+        color: black;
+    }
 </style>

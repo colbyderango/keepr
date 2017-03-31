@@ -41,5 +41,8 @@
 </script>
 
 <style>
+  input{
+    color: white;
+  }
 
 </style>

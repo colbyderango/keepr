@@ -16,6 +16,20 @@ export default {
         })
     }
   },
+    getKeepsByTag: {
+    path: '/taggedkeeps',
+    reqType: 'post',
+    method(req, res, next){
+      let action = 'Search keeps by tag'
+      Keeps.find({ tags: { "$regex": req.body.tags, "$options": "i" } })
+        .then(keeps => {
+          res.send(handleResponse(action, keeps))
+        })
+        .catch(error => {
+          return next(handleResponse(action, null, error))
+        })
+    }
+  },
   getSpecificKeep: {
     path: '/keep/:id',
     reqType: 'get',
